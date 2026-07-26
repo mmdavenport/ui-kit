@@ -17,8 +17,8 @@ type Story = StoryObj<typeof RecordCard>;
 export const Confirmed: Story = {
   args: {
     status: "confirmed",
-    title: "Integration Complete",
-    quote: "What you resist persists; what you accept transforms.",
+    title: "Draft Saved",
+    quote: "Your changes have been committed to the ledger.",
     txHash: "0x8a3f…b7c2e91d",
   },
 };
@@ -30,7 +30,7 @@ export const Pending: Story = {
 export const Failed: Story = {
   args: {
     status: "failed",
-    title: "Recording Failed",
+    title: "Save Failed",
     quote: "Something went wrong — please try again.",
   },
 };

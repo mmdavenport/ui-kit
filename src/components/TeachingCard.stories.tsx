@@ -19,33 +19,33 @@ type Story = StoryObj<typeof TeachingCard>;
 
 export const FullContent: Story = {
   args: {
-    name: "Blueberries",
-    tags: ["Antioxidant", "Brain Health"],
-    caption: "Rich in anthocyanins that support cognitive function.",
-    focus: "NEURO",
+    name: "Rate Limiting",
+    tags: ["Infrastructure", "API Design"],
+    caption: "Controls request throughput to protect backend services.",
+    focus: "BACKEND",
     teaching:
-      "Anthocyanins cross the blood-brain barrier and reduce neuroinflammation. Regular intake is associated with improved memory consolidation.",
-    supplement: "Consider a concentrated extract for year-round availability.",
-    tip: "Fresh or frozen both retain the bioactive compounds.",
+      "Token-bucket algorithms allow burst traffic while enforcing a sustained rate ceiling. Leaky-bucket variants smooth output further but add latency under load.",
+    supplement: "Pair with circuit-breaker middleware for cascading-failure protection.",
+    tip: "Start with a generous limit and tighten based on observed p99 latency.",
   },
 };
 
 export const MinimalCard: Story = {
   args: {
-    name: "Turmeric",
-    tags: ["Anti-inflammatory"],
-    caption: "Contains curcumin, a potent anti-inflammatory compound.",
+    name: "Environment Variables",
+    tags: ["Configuration"],
+    caption: "Inject runtime config without rebuilding the container.",
   },
 };
 
 export const WithWarning: Story = {
   args: {
-    name: "Green Tea Extract",
-    tags: ["Stimulant", "Antioxidant"],
-    caption: "Provides L-theanine and catechins.",
-    focus: "FOCUS",
+    name: "Hot Module Replacement",
+    tags: ["Dev Tooling", "Vite"],
+    caption: "Applies code changes in the browser without a full reload.",
+    focus: "DX",
     teaching:
-      "L-theanine promotes calm alertness by modulating alpha wave activity.",
-    warning: "High doses may affect iron absorption. Take between meals.",
+      "HMR preserves component state across edits, shortening the feedback loop from seconds to milliseconds.",
+    warning: "Side-effect-heavy modules may need a full reload — watch for stale closures.",
   },
 };

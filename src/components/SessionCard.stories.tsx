@@ -17,40 +17,40 @@ type Story = StoryObj<typeof SessionCard>;
 
 export const Available: Story = {
   args: {
-    title: "Focus & Attention",
+    title: "Onboarding Walkthrough",
     subtitle:
-      "A bilateral-stimulation exercise designed to support calm focus and present-moment awareness.",
+      "A step-by-step introduction to the dashboard, key features, and account settings.",
     duration: "8 min",
-    tags: ["Dopamine", "GABA"],
+    tags: ["Getting Started", "UX"],
     backContent: {
-      heading: "Protocol Detail",
+      heading: "Module Detail",
       sections: [
-        { label: "Supplements", text: "L-Tyrosine 500mg, Magnesium Glycinate 200mg" },
-        { label: "Co-factors", text: "B6 (P-5-P), Vitamin C" },
-        { label: "Avoid", text: "Caffeine 2h before session", color: "#FF4444" },
+        { label: "Prerequisites", text: "Active account, verified email" },
+        { label: "Covers", text: "Navigation, settings panel, notification preferences" },
+        { label: "Note", text: "Skip if you completed setup via the CLI", color: "#FF4444" },
       ],
-      footnote: "Educational reference only. Not clinical advice.",
+      footnote: "Content may vary by plan tier.",
     },
   },
 };
 
 export const Completed: Story = {
   args: {
-    title: "Calm Resilience",
-    subtitle: "Rhythmic left-right engagement for emotional regulation.",
+    title: "Team Sync",
+    subtitle: "Review shared dashboards and recent activity across your workspace.",
     duration: "6 min",
     status: "completed",
-    tags: ["Serotonin"],
+    tags: ["Collaboration"],
   },
 };
 
 export const Locked: Story = {
   args: {
-    title: "Advanced Integration",
-    subtitle: "Deep bilateral protocol for experienced users.",
+    title: "Advanced Analytics",
+    subtitle: "Deep-dive reporting with custom date ranges and export options.",
     duration: "12 min",
     status: "locked",
-    tags: ["Endorphin"],
-    lockReason: "Requires Level 2",
+    tags: ["Pro"],
+    lockReason: "Requires Pro plan",
   },
 };
