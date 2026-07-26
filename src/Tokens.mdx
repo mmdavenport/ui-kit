@@ -1,0 +1,106 @@
+{/* @meta title="Design Tokens" */}
+
+# Design Tokens
+
+Visual reference for the token values defined in `src/tokens.ts` and `src/index.css`.
+
+---
+
+## Colors
+
+<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 12 }}>
+  {[
+    ["Navy", "#0B1120"],
+    ["Dark", "#030B0F"],
+    ["Card", "#0A1419"],
+    ["Cyan", "#00F0FF"],
+    ["Accent", "#00D9FF"],
+    ["Blue", "#1E90FF"],
+    ["Gold", "#F2C94C"],
+    ["Brand Gold", "#FFD700"],
+    ["Green", "#22C55E"],
+    ["Emerald", "#34D399"],
+    ["Coral", "#F97316"],
+    ["Red", "#FF4444"],
+    ["Purple", "#A855F7"],
+    ["Foreground", "#E2E8F0"],
+    ["Muted FG", "#94A3B8"],
+    ["Muted", "#1A2A33"],
+    ["Border", "#1E3A4C"],
+    ["Dim", "#7A9BA8"],
+  ].map(([name, hex]) => (
+    <div key={name} style={{ textAlign: "center" }}>
+      <div style={{ width: "100%", height: 56, borderRadius: 8, background: hex, border: "1px solid rgba(255,255,255,0.1)" }} />
+      <div style={{ fontSize: "0.7rem", color: "#E2E8F0", marginTop: 6, fontWeight: 600 }}>{name}</div>
+      <div style={{ fontSize: "0.6rem", color: "#94A3B8", fontFamily: "monospace" }}>{hex}</div>
+    </div>
+  ))}
+</div>
+
+---
+
+## Type Scale
+
+<div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+  {[
+    ["3xs", "0.48rem"],
+    ["2xs", "0.55rem"],
+    ["xs", "0.65rem"],
+    ["sm", "0.75rem"],
+    ["base", "0.85rem"],
+    ["lg", "0.95rem"],
+    ["xl", "1.15rem"],
+    ["2xl", "1.375rem"],
+    ["3xl", "1.75rem"],
+    ["4xl", "2.25rem"],
+  ].map(([name, size]) => (
+    <div key={name} style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+      <span style={{ fontSize: "0.6rem", color: "#94A3B8", fontFamily: "monospace", width: 60, flexShrink: 0 }}>{name}</span>
+      <span style={{ fontSize: "0.55rem", color: "#7A9BA8", fontFamily: "monospace", width: 70, flexShrink: 0 }}>{size}</span>
+      <span style={{ fontSize: size, color: "#E2E8F0", fontFamily: "'Chakra Petch', system-ui, sans-serif" }}>The quick brown fox</span>
+    </div>
+  ))}
+</div>
+
+---
+
+## Spacing
+
+<div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "flex-end" }}>
+  {[
+    ["1", "4px"],
+    ["2", "8px"],
+    ["3", "12px"],
+    ["4", "16px"],
+    ["5", "20px"],
+    ["6", "24px"],
+    ["8", "32px"],
+    ["10", "40px"],
+    ["12", "48px"],
+  ].map(([name, px]) => (
+    <div key={name} style={{ textAlign: "center" }}>
+      <div style={{ width: px, height: px, background: "#00D9FF33", border: "1px solid #00D9FF55", borderRadius: 4 }} />
+      <div style={{ fontSize: "0.55rem", color: "#94A3B8", marginTop: 4, fontFamily: "monospace" }}>{name}</div>
+      <div style={{ fontSize: "0.5rem", color: "#7A9BA8", fontFamily: "monospace" }}>{px}</div>
+    </div>
+  ))}
+</div>
+
+---
+
+## Border Radius
+
+<div style={{ display: "flex", gap: 16 }}>
+  {[
+    ["sm", "6px"],
+    ["md", "8px"],
+    ["lg", "10px"],
+    ["xl", "12px"],
+  ].map(([name, r]) => (
+    <div key={name} style={{ textAlign: "center" }}>
+      <div style={{ width: 56, height: 56, background: "#00D9FF22", border: "1px solid #00D9FF55", borderRadius: r }} />
+      <div style={{ fontSize: "0.55rem", color: "#94A3B8", marginTop: 4, fontFamily: "monospace" }}>{name}</div>
+      <div style={{ fontSize: "0.5rem", color: "#7A9BA8", fontFamily: "monospace" }}>{r}</div>
+    </div>
+  ))}
+</div>
