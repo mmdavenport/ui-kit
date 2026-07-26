@@ -4,6 +4,7 @@ import Badge from "./Badge";
 const meta: Meta<typeof Badge> = {
   title: "Primitives/Badge",
   component: Badge,
+  parameters: { docs: { description: { component: "Inline status indicator. Use to label state (active, pending, failed) next to a title or in a table row. Not interactive — for clickable labels, use a button with badge styling." } } },
   argTypes: {
     variant: { control: "select", options: ["default", "success", "warning", "error", "info"] },
     label: { control: "text" },

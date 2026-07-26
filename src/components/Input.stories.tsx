@@ -4,6 +4,7 @@ import Input from "./Input";
 const meta: Meta<typeof Input> = {
   title: "Primitives/Input",
   component: Input,
+  parameters: { docs: { description: { component: "Single-line text field with optional label and inline error. Use for short-form data entry. For multi-line content, use a textarea instead." } } },
   argTypes: {
     label: { control: "text" },
     error: { control: "text" },

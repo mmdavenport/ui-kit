@@ -17,7 +17,13 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ["Introduction", "Design Tokens", "Primitives", "Components"],
+      },
+    },
   },
+  tags: ["autodocs"],
 };
 
 export default preview;

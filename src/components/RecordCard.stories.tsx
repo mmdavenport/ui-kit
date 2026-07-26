@@ -4,6 +4,7 @@ import RecordCard from "./RecordCard";
 const meta: Meta<typeof RecordCard> = {
   title: "Components/RecordCard",
   component: RecordCard,
+  parameters: { docs: { description: { component: "Confirmation card for completed, pending, or failed record operations. Use after a write action to show outcome + next steps. Not for read-only data display — use a detail card instead." } } },
   argTypes: {
     status: { control: "select", options: ["pending", "confirmed", "failed"] },
     title: { control: "text" },

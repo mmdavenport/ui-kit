@@ -4,6 +4,7 @@ import Button from "./Button";
 const meta: Meta<typeof Button> = {
   title: "Primitives/Button",
   component: Button,
+  parameters: { docs: { description: { component: "Primary action trigger. Use for form submissions, confirmations, and CTAs. Avoid for navigation — use a link instead." } } },
   argTypes: {
     variant: { control: "select", options: ["primary", "secondary", "danger"] },
     size: { control: "select", options: ["sm", "md", "lg"] },

@@ -4,6 +4,7 @@ import TeachingCard from "./TeachingCard";
 const meta: Meta<typeof TeachingCard> = {
   title: "Components/TeachingCard",
   component: TeachingCard,
+  parameters: { docs: { description: { component: "Educational content card with a structured layout: name, tags, caption, and optional teaching/supplement/warning/tip slots. Use for reference material and explainer content. Not for transient notifications — use Alert instead." } } },
   argTypes: {
     name: { control: "text" },
     caption: { control: "text" },

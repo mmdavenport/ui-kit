@@ -1,0 +1,80 @@
+{/* @meta title="Introduction" */}
+
+# ui-kit
+
+A design system for dark-themed, data-dense dashboard interfaces. Tokens
+define the visual language; components consume them.
+
+---
+
+## Token architecture
+
+Four token categories compose every surface in the system.
+
+### Color
+18 named colors in `src/tokens.ts`, exposed as CSS custom properties in
+`src/index.css`. The palette is split into three roles:
+
+- **Backgrounds** — `navy`, `dark`, `card`, `muted`. Layered from darkest
+  (`dark` #030B0F) to card surfaces (`card` #0A1419).
+- **Interactive** — `cyan`, `accent`, `blue`, `gold`, `green`, `coral`,
+  `red`, `purple`. Each has a matching low-opacity background tint for
+  badges, alerts, and hover states.
+- **Text** — `foreground` (primary), `mutedForeground` (secondary),
+  `dim` (tertiary). Contrast ratios are tuned against `dark` and `navy`.
+
+### Type scale
+10 steps from `3xs` (0.48 rem) to `4xl` (2.25 rem). The default body size
+is `base` (0.85 rem) — compact enough for data tables, large enough for
+reading on mobile. The font stack is Chakra Petch with a system-ui
+fallback.
+
+### Spacing
+12 steps on a 4 px base: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80 px.
+Components use these values for padding, gap, and margin to keep vertical
+rhythm consistent.
+
+### Border radius
+Four values — `sm` (6 px), `md` (8 px), `lg` (10 px), `xl` (12 px).
+Cards and modals use `xl`; buttons and inputs use `md`; badges use full
+rounding (12 px pill).
+
+---
+
+## Component inventory
+
+| Component | Purpose | Key states |
+|---|---|---|
+| **Button** | Primary action trigger. Three variants (primary, secondary, danger) × three sizes. | default, loading, disabled |
+| **Input** | Single-line text entry with optional label and inline error. | default, focus, error, disabled |
+| **Badge** | Inline status label. Five semantic variants. | default, success, warning, error, info |
+| **Alert** | Block-level notification. Dismissible when `onDismiss` is provided. | info, success, warning, error |
+| **WalletPicker** | Modal dialog for selecting a browser-injected or external wallet. | providers present, none detected, connecting |
+| **RecordCard** | Confirmation card shown after an entry is committed. | pending, confirmed, failed |
+| **TeachingCard** | Educational content card with "why this matters" explanation. | full (with teaching + supplement/warning/tip), minimal |
+| **StatusTicker** | Horizontal scrolling data ticker. Accepts any `{ symbol, price, change24h }` array. | populated, single item |
+| **SessionCard** | Flip card — front shows metadata, back shows detail sections. | available, completed, locked |
+
+---
+
+## State conventions
+
+Components follow a shared vocabulary for state:
+
+- **pending** — an operation is in flight. Show a spinner, disable
+  actions, hide content that depends on the result.
+- **confirmed** — the operation succeeded. Show the result, enable
+  next-step actions.
+- **failed** — the operation did not complete. Show an error message
+  and a retry path.
+- **empty** — no data to display. Show a placeholder message, not a
+  blank frame.
+- **loading** — data is being fetched (distinct from *pending*, which
+  implies a user-initiated mutation). Disable the control but keep
+  its label visible.
+- **disabled** — the control is intentionally inactive. Reduce opacity,
+  set `cursor: not-allowed`, remove hover effects.
+- **error** — an input is invalid. Show a red border, an inline error
+  message, and set `aria-invalid`.
+
+All presentational — no network calls, no SDK dependencies.

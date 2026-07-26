@@ -4,6 +4,7 @@ import SessionCard from "./SessionCard";
 const meta: Meta<typeof SessionCard> = {
   title: "Components/SessionCard",
   component: SessionCard,
+  parameters: { docs: { description: { component: "Flip card with a front face (title, tags, duration, status) and a back face (detail sections). Use for browsable lists where each item has a summary + detail view. Not for single-item detail pages — use a full layout instead." } } },
   argTypes: {
     status: { control: "select", options: ["available", "completed", "locked"] },
     title: { control: "text" },

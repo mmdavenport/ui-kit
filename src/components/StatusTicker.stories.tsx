@@ -4,6 +4,7 @@ import StatusTicker from "./StatusTicker";
 const meta: Meta<typeof StatusTicker> = {
   title: "Components/StatusTicker",
   component: StatusTicker,
+  parameters: { docs: { description: { component: "Horizontal scrolling ticker for real-time numeric data (prices, metrics, KPIs). Pauses on hover. Not suitable for long text content — use a banner or alert instead." } } },
   argTypes: {
     trailingLabel: { control: "text" },
   },

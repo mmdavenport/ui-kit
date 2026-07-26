@@ -4,6 +4,7 @@ import Alert from "./Alert";
 const meta: Meta<typeof Alert> = {
   title: "Primitives/Alert",
   component: Alert,
+  parameters: { docs: { description: { component: "Block-level notification for system messages, validation summaries, or transient feedback. Dismissible when onDismiss is provided. For inline field errors, use Input's error prop instead." } } },
   argTypes: {
     variant: { control: "select", options: ["info", "success", "warning", "error"] },
     title: { control: "text" },
