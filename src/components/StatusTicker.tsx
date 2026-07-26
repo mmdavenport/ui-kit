@@ -32,7 +32,7 @@ export default function StatusTicker({ items, trailingLabel }: StatusTickerProps
 
     let html = segs.join(sep);
     if (trailingLabel) {
-      html += `${sep}<span style="display:inline-block;padding:0 0.6rem;color:rgba(255,255,255,0.3);font-size:0.6rem">${trailingLabel}</span>`;
+      html += `${sep}<span style="display:inline-block;padding:0 0.6rem;color:rgba(255,255,255,0.55);font-size:0.6rem">${trailingLabel}</span>`;
     }
     return html;
   };
