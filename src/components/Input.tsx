@@ -18,7 +18,7 @@ export default function Input({ label, error, style, id, ...rest }: InputProps) 
             display: "block",
             fontSize: "0.65rem",
             letterSpacing: "0.1em",
-            color: error ? colors.red : `${colors.accent}cc`,
+            color: error ? colors.red : colors.dim,
             marginBottom: 4,
             textTransform: "uppercase",
           }}

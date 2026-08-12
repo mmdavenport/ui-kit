@@ -130,7 +130,7 @@ export default function RecordCard({
           <div
             style={{
               fontSize: "0.5rem",
-              color: "rgba(255,255,255,0.6)",
+              color: colors.mutedForeground,
               letterSpacing: "0.1em",
               marginBottom: 4,
             }}
